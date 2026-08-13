@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Chatbot - Beautiful Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>Smart FAQ Assistant</h2>
+        </div>
+        
+        <div class="chat-box" id="chatBox">
+            <div class="message bot-message">
+                👋 Hello! I'm Miajee, 
+                How can I help you today? Ask me about shipping, returns, or support.
+            </div>
+            
+            <div class="suggestions-container">
+                <div class="suggestion-title">Popular Questions:</div>
+                <div class="quick-suggestions">
+                    <button class="suggestion-btn" onclick="sendMessage('What is your return policy?')">
+                        <span class="suggestion-icon">↩️</span>
+                        Returns
+                    </button>
+                    <button class="suggestion-btn" onclick="sendMessage('How long does shipping take?')">
+                        <span class="suggestion-icon">🚚</span>
+                        Shipping Time
+                    </button>
+                    <button class="suggestion-btn" onclick="sendMessage('What payment methods do you accept?')">
+                        <span class="suggestion-icon">💳</span>
+                        Payment
+                    </button>
+                    <button class="suggestion-btn" onclick="sendMessage('How can I track my order?')">
+                        <span class="suggestion-icon">📍</span>
+                        Track Order
+                    </button>
+                    <button class="suggestion-btn" onclick="sendMessage('Which countries do you ship to?')">
+                        <span class="suggestion-icon">🌍</span>
+                        Countries
+                    </button>
+                    <button class="suggestion-btn" onclick="sendMessage('How can I contact customer support?')">
+                        <span class="suggestion-icon">💬</span>
+                        Support
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-input-area">
+            <input type="text" id="userInput" placeholder="Type your question here..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
